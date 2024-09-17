@@ -1,9 +1,10 @@
 import createError from 'http-errors';
 import express from 'express';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import { minify } from 'minify';
 
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
@@ -19,6 +20,7 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(minify({cache: `${__dirname}/cache`}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
