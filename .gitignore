@@ -1,38 +1,5 @@
-# Ignore operating system files
-*.DS_Store
-Thumbs.db
-
-# Ignore IDE files
-.vscode/
-.idea/
-*.iml
-
-# Ignore build and compilation files
-build/
-dist/
 node_modules/
-target/
-
-# Ignore logs and temporary files
-logs/
-tmp/
-*.log
-*.tmp
-
-# Ignore sensitive information
-*.env
-*.key
-*.pem
-*.secret
-
-# Ignore specific file types
-*.class
-*.exe
-*.o
-*.obj
-*.zip
-*.rar
-*.tar
-*.gz
-*.bz2
-*.7zs
+.env
+cache/
+cache/*
+node_modules
