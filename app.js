@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import { minify } from 'minify';
+import minify from 'express-minify';
 
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
